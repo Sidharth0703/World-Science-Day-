@@ -1,0 +1,145 @@
+<html>
+    <head>
+    <title>My Project (World Science Day)</title>
+    <style>
+        @keyframes load{
+            0%{
+                background-image: url('https://cdn.gifka.com/public/thumbs/xlarge/7/7682.gif');
+                background-size: 100% 100%;
+            }
+            30%{
+                background-image: url('https://i.pinimg.com/originals/69/6e/96/696e963f3a56938bedb7899ab41c71fe.gif');
+                background-size: 100% 100%;
+                
+            }
+           
+            60%{
+                background-image: url('https://i.pinimg.com/originals/88/15/63/881563d6444b370fa4ceea0c3183bb4c.gif');
+                background-size: 100% 100%;
+            }
+            90%{
+                background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/67d89460550773.5a512c466d624.gif');
+                background-size: 100% 100%;
+            }
+        }
+        body{
+            animation:load 10s;
+        }
+        input[type="submit"]{
+background-color: rgb(0, 225, 255);
+color: darkslateblue;
+width: 500px;
+height: 50px;
+
+        }
+        .main{
+            display:flex;
+            justify-content: space-around;
+            height: 70px;
+            margin:0;
+            background-color: rgba(0,0,0,0.3);
+            
+        }
+
+        .b{
+            height:50px;
+                width:24%;
+                transition: 0.5s;
+                margin-top:-10px;
+        }
+        .b:hover{
+            width:30%;
+        }
+        a{
+            color:white;
+            text-decoration:none;
+        }
+        h1{
+            text-align: end;
+            color: darkslateblue;
+        }
+        .mainone{
+            display: flex;
+            justify-content: space-around;
+            height:700px;
+        }
+        .mainthree{
+            
+            width:45%;
+        }
+.maintwo{
+    width:35%;
+}
+        .maintwo{
+           background-image: url('https://pa1.narvii.com/7645/42794e5596f6de6b361de91acbfe8f904a349dc2r1-480-480_hq.gif');
+            background-size: 100% 100%;
+            background-repeat:no-repeat;
+            height: 70%;
+        }
+        #heading{
+            text-align: center;
+            margin-top:300px;
+        }
+    </style>
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        setInterval(name,1000);
+        function name(){
+            var d=new Date();
+            document.getElementById("two").innerHTML=d.toLocaleTimeString();
+        } 
+        </script>
+</head>
+    <body style="background-image: url('https://images.fineartamerica.com/images-medium-large-5/sky-background-at-sunset-clouds-vivid-moreiso.jpg');background-size: cover;">
+        <div class="main">
+            <div class="b"><h1 style="text-align: center;background-color: rgb(0, 255, 255);color: white;">Home</h1></div>
+            <div class="b"><h1 style="text-align: center;background-color: slateblue;color: white;">Maps</h1></div>
+            <div class="b"><h1 style="text-align: center;background-color: slateblue;color: white;">Contact Us</h1></div>
+            <div class="b"><h1 style="text-align: center;background-color: slateblue;color: white;">Quizes</h1></div>
+        </div>
+        <h2><marquee style="color: rgb(76, 0, 255);"><i>Login Here To Get A First Free Ticket To Visit A Place Where All The Project's For "World Science Day" Are Kept!So,Don't Forget To Login!</i></marquee></h2>
+        <h1 id="two">4:54:17 PM</h1>
+        
+    <h1 style="text-align: center;color: whitesmoke;"><i><b><u>We Need To Know You Personal And Public Information!Fill This Login Form First!</u></b></i></h1>
+        <h2>
+            <div class="mainone">
+                <div class="maintwo">
+                    <h1 id="heading"></h1>
+                </div>
+                <div class="mainthree">
+                    <form style="text-align: center;" action="Info Once Submit.html">
+                        <div style="color: darkslateblue;">
+                            <br><br>
+                    <label>First Name</label>
+                    <input type="Text" name="FName" required=""><br><br><br>
+                    <label>Email ID</label>
+                    <input type="email" name="UserEmail" required=""><br><br><br>
+                    <label>Phone Number</label>
+                    <input type="Phone Number" name="Phone" required="">
+                    <br><br><label>Age</label>
+                    <input type="number" min="0" max="150" name="Age" required=""><br><br><br>
+                    <label style="color: rgb(0, 115, 182);">Password</label>
+                    <input type="password" name="Password" required=""><br><br><br>
+                    <label style="color: rgb(102, 11, 163);"><u>Gender</u></label>
+                    <div style="color: hsl(0, 88%, 19%);">
+                    <input type="Radio" name="M">&nbsp; &nbsp; Male &nbsp; &nbsp;&nbsp; &nbsp;
+                    <input type="Radio" name="M">&nbsp; &nbsp; Female &nbsp; &nbsp;&nbsp; &nbsp;
+                    <input type="Radio" name="M">&nbsp; &nbsp; Others &nbsp; &nbsp;&nbsp; &nbsp;<br><br><br>
+                    <label>Country Code</label>
+                    <select style="background-color:rgb(223, 182, 0);color:darkorange;width:100px;height:30px;">
+                    <option selected="" disabled="">-SELECT-</option>
+                    <option>+971</option>
+                    <option>+974</option>
+                    <option>+91</option>
+                    <option>+954</option>
+                    </select><br><br><br>
+                    <input type="submit" name="Submit">
+                            </div> 
+                    
+                </div></form>
+            </div>
+    
+    </div></h2>
+
+</body>
+</html>

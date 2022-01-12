@@ -7,7 +7,7 @@
                 background-image: url('https://i.pinimg.com/originals/e8/5f/d9/e85fd95815e4371f1531fc9e7865d65c.gif');
                 background-size: 100% 100%;
             }
-        #one, #two,#three{
+        #one, #Two,#Three,#Four,#Five{
             color:white;
             border:5px solid white;
             width:400px;
@@ -27,6 +27,9 @@
             margin-left: 500px;
             padding:25px;
         }
+        #Two,#Three,#Four,#Five{
+            display: none;
+        }
         label{
                 font-weight: 700;
                 font-size:18px;
@@ -37,9 +40,6 @@
                 background-color: rgb(0, 119, 255);
                 margin-left:-29px;
                 height:30px;
-            }
-            #two,#three,#done{
-                display: none;
             }
             p{
                 text-align: center;
@@ -70,17 +70,90 @@
             </form>
             <button onclick="nextone()">Check Answer</button>
         </div>
-        
-
+        <div id="Two">
+            <form>
+                <label><U>Question 2 Who Is The Father Of Modern Science?</U></label><br><br>
+                
+                <input type="radio" name="ok" id="opt4">Einstein<br>
+                <input type="radio" name="ok" id="opt5" >Galileo<br>
+                <input type="radio" name="ok" id="opt6">Father<br>
+            
+            </form>
+            <button onclick="nextwo()">Check Answer</button>
+        </div>
+        <div id="Three">
+            <form>
+                <label><U>Question 3 When Was Galileo Born?</U></label><br><br>
+                
+                <input type="radio" name="ok" id="opt7" >February 15, 1564<br>
+                <input type="radio" name="ok" id="opt8" >January 28, 1478<br>
+                <input type="radio" name="ok" id="opt9">March 7, 1898<br>
+            
+            </form>
+            <button onclick="nexthree()">Check Answer</button>
+        </div>
+        <div id="Five">
+            <form>
+                <label><U>Question 4 What Arev The 2 Subject's Of Science?</U></label><br><br>
+                
+                <input type="radio" name="ok" id="opt10" >Physics Chemistry Only<br>
+                <input type="radio" name="ok" id="opt11" >Biology Only<br>
+                <input type="radio" name="ok" id="opt12">Physics,Chemistry And Biology<br>
+            
+            </form>
+            <button onclick="nextfour()">Check Answer</button>
+        </div>
+        <div id="Four">
+            <h1 id="res"></h1>
+        </div>
         <script type="text/javascript">
+            var Score=0;
             function nextone(){
                 if(document.getElementById("opt1").checked==true){
-                    swal("Congratulations","Your Answer Is Correct","success");
+                    Score=Score+1
+                    swal("Congratulations","Your Answer Is Correct, Score is"+Score,"success");
                 }
                 else{
                     swal("Oops","The Correct Answer Is 28th February","error");
                 }
+                document.getElementById("one").style.display="none";
+                document.getElementById("Two").style.display="block";
             }
+            function nextwo(){
+                if(document.getElementById("opt5").checked==true){
+                    Score=Score+1
+                    swal("Congratulations","Your Answer Is Correct,Score is"+Score,"success");
+                }
+                else{
+                    swal("Oops","The Correct Answer Is Galileo","error");
+                }
+                document.getElementById("Two").style.display="none";
+                document.getElementById("Three").style.display="block"
+            }
+            function nexthree(){
+                if(document.getElementById("opt7").checked==true){
+                    Score=Score+1
+                    swal("Congratulations","Your Answer Is Correct,Score is"+Score,"success");
+                }
+                else{
+                    swal("Oops","The Correct Answer Is February 15, 1564","error");}
+                document.getElementById("Three").style.display="none";
+                document.getElementById("Five").style.display="block";
+                }
+                function nextfour(){
+                if(document.getElementById("opt12").checked==true){
+                    Score=Score+1
+                    swal("Congratulations","Your Answer Is Correct, Score is"+Score,"success");
+                }
+                else{
+                    swal("Oops","The Correct Answer Is Physics, Chemistry,Biology","error");
+                }
+                document.getElementById("Four").innerHTML="The Score is "+Score+"/4";
+                document.getElementById("Four").style.fontSize="40px";
+                document.getElementById("Five").style.display="none";
+                document.getElementById("Four").style.display="block";
+            }
+                
         </script>
     </body>
 </html>
